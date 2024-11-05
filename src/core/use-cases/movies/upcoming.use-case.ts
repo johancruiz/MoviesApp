@@ -5,17 +5,17 @@ import type { Movie } from '../../entities/movie.entity';
 
 
 
-export const moviesPopularUseCase = async ( fetcher: HttpAdapter  ):Promise<Movie[]> => {
+export const moviesUpcomingUseCase = async ( fetcher: HttpAdapter  ):Promise<Movie[]> => {
   
   try {
 
-    const popular = await fetcher.get<MovieDBMoviesResponse>('/popular');
+    const upcoming = await fetcher.get<MovieDBMoviesResponse>('/upcoming');
 
-    return popular.results.map(  MovieMapper.fromMovieDBResultToEntity );
+    return upcoming.results.map(  MovieMapper.fromMovieDBResultToEntity );
 
   } catch (error) {
     console.log(error);
-    throw new Error('Error fetching movies - PopularUseCase');
+    throw new Error('Error fetching movies - UpcomingUseCase');
   }
 
 

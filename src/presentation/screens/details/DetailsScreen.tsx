@@ -1,12 +1,9 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View } from 'react-native';
 
-const DetailsScreen = () => {
+export const DetailsScreen = () => {
   return (
-        <View>
-           <Text>Details Screen</Text> 
-        </View>
+    <View>
+      <Text>DetailsScreen</Text>
+    </View>
   )
 }
-
-export default DetailsScreen
