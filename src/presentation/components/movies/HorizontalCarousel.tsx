@@ -60,7 +60,7 @@ const HorizontalCarousel = ({ movies, title, loadNextPage }: Props) => {
         ) }
         keyExtractor={ (item, index) => `${item.id} - ${ index }` }
         horizontal
-        showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={ false }
         onScroll={ onScroll  }
     />
       
