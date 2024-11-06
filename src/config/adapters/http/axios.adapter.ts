@@ -25,7 +25,6 @@ export class AxiosAdapter implements HttpAdapter {
     try {
       
       const { data } = await this.axiosInstance.get<T>(url, options );
-
       return data;
 
     } catch (error) {
